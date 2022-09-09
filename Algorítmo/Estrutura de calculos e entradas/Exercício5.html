@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite a sua curiosidade: 
+    <input id='base_tabuada'>
+
+    <button onclick="tabuada ()">
+        Veja a tabuada!
+    </button>
+
+<div id="resultados">
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+<script>
+function tabuada () {
+ var resultado = base_tabuada.value  
+
+resultados.innerHTML =` 
+ ${base_tabuada.value} x 1 = ${resultado * 1} <br>
+ ${base_tabuada.value} x 2 = ${resultado * 2} <br>
+ ${base_tabuada.value} x 3 = ${resultado * 3} <br>
+ ${base_tabuada.value} x 4 = ${resultado * 4} <br>
+ ${base_tabuada.value} x 5 = ${resultado * 5} <br>
+ ${base_tabuada.value} x 6 = ${resultado * 6} <br>
+ ${base_tabuada.value} x 7 = ${resultado * 7} <br>
+ ${base_tabuada.value} x 8 = ${resultado * 8} <br>
+ ${base_tabuada.value} x 9 = ${resultado * 9}
+ 
+ `
+}
+</script>

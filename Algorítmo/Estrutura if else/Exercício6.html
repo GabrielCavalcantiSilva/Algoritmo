@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  Qual a temperatura: <input type="text" id="input_temperatura"> 
+  <button onclick="ver_clima ()">Verificar clima</button>
+  <div id="div_comidinha"></div>
+</body>
+</html>
+
+<script>
+//a) Solicita a temperatura do ambiente;
+//b) Ao clicar em "Verificar clima", determine se o clima está:
+//Apropriada p/ conservar alimento - Caso a temperatura for menor que 10;
+//Inapropriada p/ conservar alimento - Caso a temperatura for a partir de 10;
+//c) Em caso de temperatura apropriada, exiba a figura de um alimento em bom estado; Caso contrário, exiba a imagem de um alimento estragado.
+function ver_clima () {
+    var clima = Number (input_temperatura.value)
+    if (clima < 10) {
+    div_comidinha.innerHTML = `<img src="https://quizlandia.club/wp-content/uploads/2019/06/sonhar-com-comida-estragada-1280x720.jpg">`
+    } else {
+        div_comidinha.innerHTML = `<img src="https://img.itdg.com.br/tdg/images/recipes/000/178/357/328308/328308_original.jpg?mode=crop&width=710&height=400">`
+    } 
+}
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Valor da pizza: <input type="text" id="input_valor_pizza"> <br>
+    Quantos amigos: <input type="text" id="input_qtd_amigos"> <br>
+    O valor por amigo: <input type="text" id="input_valor_amigo"> <br>
+    <button onclick="resultado_pizza ()">Rola a pizza?</button>
+    <div id="resultados">
+
+    </div>
+</body>
+</html>
+
+<script>
+//a) Pergunte o valor da pizza;
+//b) Pergunte a quantidade de amigos reunidos;
+//c) Ao clicar em "Rola a pizza?", calcule e exiba o valor que cada amigo vai pagar na pizza com uma frase na página como esta:
+//"Cada amigo vai pagar R$X pela pizza";
+//d) Caso o valor por amigo passe de R$20,00, exiba também a frase:
+//"Deu ruim! Pizza muito cara!";
+//Refaça a questão 6 da lista "Estrutura de decisão IF" (da pizza) de tal forma que, caso o valor por amigo fique em até 20,00 deve aparecer a frase "Uhu! Vamos pedir a pizza!".
+function resultado_pizza () {
+var valor_pizza = Number (input_valor_pizza.value)
+var qtd_amigos = Number (input_qtd_amigos.value)
+var valor_amigo = Number (input_valor_amigo.value)
+ if (valor_amigo > 20) {
+    resultados.innerHTML = `Cada amigo vai pagar R$${valor_amigo} pela pizza. <br>Deu ruim! Pizza muito cara!`
+} else {
+    resultados.innerHTML = `Cada amigo vai pagar R$${valor_amigo}. <br> Uhu! Vamos pedir pizza!`
+} 
+
+}
+</script>

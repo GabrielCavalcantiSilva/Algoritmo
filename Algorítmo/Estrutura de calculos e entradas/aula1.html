@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula HTML 11/08</title>
+</head>
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        background-color: #f3a4a4;
+    
+
+    }
+</style>
+<body>
+    <button onclick="mostrar_mensagem ()">
+        Clica em mim para aprender matemática
+    </button>
+    Digite seu nome:
+    <input id="input_nome" type="text">
+    Digite seu bairro:
+    <input id="input_bairro" type="text">
+    Digite sua idade
+    <input id="input_idade" type="number">
+    <h1><i>Não gosta de matemática?</i></h1>
+    <button onclick="mostrar_nome ()">
+        Oia o nominho ali Ó
+    </button>
+    <button onclick="cumprimentar ()">
+        cumprimentar
+    </button>
+    <button onclick="mostrar_prompt ()">
+        Digita a idade aí
+    </button>
+</body>
+</html>
+
+<script>
+
+    function mostrar_mensagem () {
+        alert ('Pronto, agora você sabe matemática!')
+    }
+    function mostrar_prompt () {
+        prompt('Qual a sua idade?') 
+    }
+    function mostrar_nome () {
+        alert(input_nome.value)
+    }
+    function cumprimentar () {
+        alert ("Olá, " + input_nome.value + " você mora no bairro " + input_bairro.value + " e tem " + input_idade.value + " anos, correto?")
+    }
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  Primeira nota: <input type="text" id="input_n1"><br>
+  Segunda nota: <input type="text" id="input_n2"> <br>
+  Terceira nota: <input type="text" id="input_n3">
+   <button onclick="desempenho ()">Analisar desempenho</button>  
+  <div id="media_valor">
+       
+    </div>
+</body>
+</html>
+
+
+
+<script>
+//a) Pergunte o valor de 3 notas;
+//b) Ao clicar num botão "Analisar desempenho", calcule a média entre as notas e exiba na tela a frase "Sua média foi de X", onde X é a média calculada;
+//c) Somente caso a média for acima de 9,4, exibir também a frase "Parabéns, você é fora de série!";
+function desempenho () {
+    var n1 = Number (input_n1.value)
+    var n2 = Number (input_n2.value)
+    var n3 = Number (input_n3.value)
+    var media = (n1 + n2 + n3) / 3
+
+    if (media < 9.4) {
+        media_valor.innerHTML =`Sua média foi de ${media}`
+    }
+    if (media > 9.4) {
+        media_valor.innerHTML =  `Sua média foi de ${media}. Parabéns, você é fora de série!`
+    }
+
+
+}
+
+</script>

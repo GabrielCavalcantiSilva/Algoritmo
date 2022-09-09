@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o seu saldo: <input type="text" id="input_saldo_usuario"> <br>
+    Digite o valor do débito <input type="text" id="input_debito"> <br>
+    <button onclick="novo_saldo ()">
+        Analisar conta
+    </button>
+    <div id="div_saldo_novo"></div>
+    
+</body>
+</html>
+
+<script>
+//a) Solicite o saldo da conta do usuário;
+//b) Solicite o valor do débito (ou seja, valor a tirar da conta);
+//c) Ao clicar em "Analisar conta", calcule o novo saldo da conta e exiba a mensagem "o saldo atual da conta corrente é XX.XX". Esta frase deverá estar em negrito e em vermelho somente se o saldo for menor que zero ou em itálico e azul caso o saldo for 0 ou mais.
+//Obs: O saldo atual da conta corrente deve aparecer com 2 casas decimais.
+var saldo = 0 
+function novo_saldo () {
+    saldo = Number (input_saldo_usuario.value)
+    var debito = Number (input_debito.value)
+    var saldo_novo = saldo - debito
+
+    if (saldo_novo < 0) {
+        div_saldo_novo.innerHTML = `O saldo atual da conta corrente é <span style="color: red"><b>R$${saldo_novo.toFixed (2)}</b></span>`
+    } else {
+        div_saldo_novo.innerHTML = `o saldo atual da conta corrente é <span style="color:blue"><i>R$${saldo_novo.toFixed(2)}</i></span> `
+    }
+}
+
+</script>
