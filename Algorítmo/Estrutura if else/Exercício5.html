@@ -7,7 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="" alt="">
     Insira a frequência do aluno: <input type="text" id="input_frequencia_aluno"> <br>
     <button onclick="calculo_frequencia ()">Analisar frequêcia</button>
     <div id="div_frequencia"></div>
@@ -21,7 +20,7 @@
 //A imagem de um aluno estudioso, caso a frequência for a partir de 50.
 function calculo_frequencia () {
     var frequencia = Number(input_frequencia_aluno.value)
-    if (frequencia >= 50) {
+    if (frequencia >= 75) {
         div_frequencia.innerHTML = `<img src= "https://veja.abril.com.br/wp-content/uploads/2016/05/bons-alunos-original.jpeg">`
     } else {
         div_frequencia.innerHTML = `<img src= "https://st.depositphotos.com/2117297/2868/i/600/depositphotos_28680923-stock-photo-happy-tourists-taking-photo-of.jpg">`
