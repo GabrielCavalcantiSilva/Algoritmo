@@ -30,17 +30,17 @@ function bao_ou_ruim () {
 var partidas = Number (input_qtd_jogos.value)
 var gols =  Number (input_qtd_gols.value)
 var media_gols = gols / partidas
-if (media_gols > 0.6) {
-    div_resultado.innerHTML = `Atacante de futuro <br>
-    <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Karim_Benzema_wearing_Real_Madrid_home_kit_2021-2022.jpg/250px-Karim_Benzema_wearing_Real_Madrid_home_kit_2021-2022.jpg">`
+if (media_gols < 0.2) {
+    div_resultado.innerHTML = `Melhor mudar de posição <br>
+        <img src = "https://miro.medium.com/max/800/1*nCAkndO1TdnGxY6G3sST-Q.jpeg">`
 } else {
-    if (media_gols >= 0.2  <= 0.6) {
+    if (media_gols < 0.6) {
         div_resultado.innerHTML = `Atacante mediano <br>
-        <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Karim_Benzema_wearing_Real_Madrid_home_kit_2021-2022.jpg/250px-Karim_Benzema_wearing_Real_Madrid_home_kit_2021-2022.jpg">`
+        <img src = "https://s.yimg.com/ny/api/res/1.2/n0uX1JGN.oMUHkAwzCRnrw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://s.yimg.com/os/creatr-uploaded-images/2020-12/bfec4d80-3f45-11eb-bbfb-fc512f6b2949">`
     }
     else {
-        div_resultado.innerHTML = `Melhor mudar de posição <br>
-        <img src = "https://miro.medium.com/max/800/1*nCAkndO1TdnGxY6G3sST-Q.jpeg">`
+        div_resultado.innerHTML = `Atacante de futuro <br>
+    <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Karim_Benzema_wearing_Real_Madrid_home_kit_2021-2022.jpg/250px-Karim_Benzema_wearing_Real_Madrid_home_kit_2021-2022.jpg">`
     }
 }
 div_media.innerHTML = `Sua média gols/partida é de ${media_gols}`
