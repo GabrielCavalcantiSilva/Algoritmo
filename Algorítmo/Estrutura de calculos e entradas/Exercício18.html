@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     Porções de pão francês: <span id="span_pao">0</span> <br>
-    Porções de carne boniva: <span id="span_boi">0</span>   <br>
-    Porções de carne de soja: <span id="span_soja">0</span>  <br>
+    Porções de carne boniva: <span id="span_boi">0</span> <br>
+    Porções de carne de soja: <span id="span_soja">0</span> <br>
     Porções de arroz com feijão: <span id="span_arroz_feijao">0</span><br>
     Total de calorias: <span id="span_total_caloria">0</span><br>
     <button onclick="paozinho ()">Comer pão</button>
@@ -22,49 +24,51 @@
 
 
 </body>
+
 </html>
 
 <script>
     var pao = 0
     var boi = 0
     var soja = 0
-    var arroz_feijao= 0
+    var arroz_feijao = 0
     var total_caloria = 0
 
 
-    function paozinho () {
+    function paozinho() {
         total_caloria += 50
         pao += 1
-        span_total_caloria.innerHTML =` ${total_caloria}`
-        span_pao.innerHTML = `${pao}`}
-    function carninha () {
+        span_total_caloria.innerHTML = ` ${total_caloria}`
+        span_pao.innerHTML = `${pao}`
+    }
+    function carninha() {
         total_caloria += 100
         boi += 1
-        span_total_caloria.innerHTML =` ${total_caloria}`
+        span_total_caloria.innerHTML = ` ${total_caloria}`
         span_boi.innerHTML = `${boi}`
     }
-    function carne_fake () {
+    function carne_fake() {
         total_caloria += 30
         soja += 1
-        span_total_caloria.innerHTML =` ${total_caloria}`
+        span_total_caloria.innerHTML = ` ${total_caloria}`
         span_soja.innerHTML = `${soja}`
     }
-    function roz_fei () {
+    function roz_fei() {
         total_caloria += 120
         arroz_feijao += 1
-        span_total_caloria.innerHTML =` ${total_caloria}`
+        span_total_caloria.innerHTML = ` ${total_caloria}`
         span_arroz_feijao.innerHTML = `${arroz_feijao}`
     }
-    function dozero () {
-        
+    function dozero() {
+
         pao = 0
         boi = 0
         soja = 0
         arroz_feijao = 0
         total_caloria = 0
-    
-        
-        span_total_caloria.innerHTML =` ${total_caloria}`
+
+
+        span_total_caloria.innerHTML = ` ${total_caloria}`
         span_arroz_feijao.innerHTML = `${arroz_feijao}`
         span_soja.innerHTML = `${soja}`
         span_boi.innerHTML = `${boi}`

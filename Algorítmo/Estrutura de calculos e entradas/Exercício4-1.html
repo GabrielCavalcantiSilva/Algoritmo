@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     Votos do candidato A:
-    <input id='votos_candidatoA' > <br>
-    Votos candidato B:    
-    <input id='votos_candidatoB' > <br>
+    <input id='votos_candidatoA'> <br>
+    Votos candidato B:
+    <input id='votos_candidatoB'> <br>
     Votos Brancos:
-    <input id='votos_brancos' > <br>
+    <input id='votos_brancos'> <br>
     Votos nulos
-    <input id='votos_nulos' > <br>
+    <input id='votos_nulos'> <br>
 
     <button onclick="calcular_votos()">Calcular votos</button> <br>
 
@@ -24,36 +26,36 @@
     <div id="Votos_invalidos"></div> <br>
 
 </body>
+
 </html>
 
 
 <script>
 
-    function calcular_votos () {
+    function calcular_votos() {
         total_dos_votos.innerHTML =
-            "Total de votos: " + (Number (votos_candidatoA.value) + Number (votos_candidatoB.value) +
-            Number (votos_brancos.value) + Number (votos_nulos.value) )
-        
+            "Total de votos: " + (Number(votos_candidatoA.value) + Number(votos_candidatoB.value) +
+                Number(votos_brancos.value) + Number(votos_nulos.value))
+
         CandidatoA.innerHTML =
-            'Candidato A: ' + (Number (votos_candidatoA.value) / (Number(votos_candidatoA.value) + 
-            Number(votos_candidatoB.value)
-            + Number (votos_brancos.value) + Number(votos_nulos.value)) * 100).toFixed(2) + '%' +
-             ' (' + Number(votos_candidatoA.value) + ') votos'
-        CandidatoB.innerHTML = 
-            'Candidato B: ' + (Number (votos_candidatoB.value) / (Number(votos_candidatoA.value) +
-             Number(votos_candidatoB.value)
-            + Number (votos_brancos.value) + Number(votos_nulos.value)) * 100).toFixed(2) + '%' + 
+            'Candidato A: ' + (Number(votos_candidatoA.value) / (Number(votos_candidatoA.value) +
+                Number(votos_candidatoB.value)
+                + Number(votos_brancos.value) + Number(votos_nulos.value)) * 100).toFixed(2) + '%' +
+            ' (' + Number(votos_candidatoA.value) + ') votos'
+        CandidatoB.innerHTML =
+            'Candidato B: ' + (Number(votos_candidatoB.value) / (Number(votos_candidatoA.value) +
+                Number(votos_candidatoB.value)
+                + Number(votos_brancos.value) + Number(votos_nulos.value)) * 100).toFixed(2) + '%' +
             ' (' + Number(votos_candidatoB.value) + ') votos'
-        Votos_invalidos.innerHTML = 
-            'Votos inválidos: ' + (Number (votos_nulos.value) + Number(votos_brancos.value) / 
-            (Number(votos_candidatoA.value) + Number(votos_candidatoB.value)
-            + Number (votos_brancos.value) + Number(votos_nulos.value)) * 100).toFixed(2) + '%' + 
+        Votos_invalidos.innerHTML =
+            'Votos inválidos: ' + (Number(votos_nulos.value) + Number(votos_brancos.value) /
+                (Number(votos_candidatoA.value) + Number(votos_candidatoB.value)
+                    + Number(votos_brancos.value) + Number(votos_nulos.value)) * 100).toFixed(2) + '%' +
             ' (' + (Number(votos_brancos.value) + Number(votos_nulos.value)) + ') votos'
 
 
-}
+    }
 
 
 
 </script>
-

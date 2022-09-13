@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Calcular raiz quadrada</h1>
-<input id="input_numero">
-<button onclick="raiz_quadrada ()">Calcule a raiz quadrada</button>
-<button onclick="raiz_cubica ()">Calcule a raiz cúbica</button>
-<div id="resultado"></div>
+    <input id="input_numero">
+    <button onclick="raiz_quadrada ()">Calcule a raiz quadrada</button>
+    <button onclick="raiz_cubica ()">Calcule a raiz cúbica</button>
+    <div id="resultado"></div>
 </body>
+
 </html>
 
 <script>
-function raiz_quadrada () {
-var numero = input_numero.value
-var raiz2 = numero ** (1/2)
+    function raiz_quadrada() {
+        var numero = input_numero.value
+        var raiz2 = numero ** (1 / 2)
 
-    resultado.innerHTML = `
+        resultado.innerHTML = `
     ${raiz2}
 `}
 
-function raiz_cubica () {
-    var numero = input_numero.value
-    var raiz3 = numero ** (1/3)
+    function raiz_cubica() {
+        var numero = input_numero.value
+        var raiz3 = numero ** (1 / 3)
 
-    resultado.innerHTML = `
+        resultado.innerHTML = `
     ${raiz3}
     `
-}
+    }
 
 
 </script>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     Qual o primeiro número?
     <input id="input_primeiro_numero"> <br>
@@ -13,22 +15,23 @@
     <input id="input_razao"><br>
     Qual termo você quer ver?
     <input id="input_numero_desejado">
-    <button onclick = 'PG ()'>Calcular PG</button>
+    <button onclick='PG ()'>Calcular PG</button>
     <div id="div_resultado_da_pg"></div>
 
 
 
 </body>
+
 </html>
 
 
 <script>
-function PG () { 
-var quo = input_razao.value
-var primeiro = input_primeiro_numero.value
-var desejo = input_numero_desejado.value
+    function PG() {
+        var quo = input_razao.value
+        var primeiro = input_primeiro_numero.value
+        var desejo = input_numero_desejado.value
 
-div_resultado_da_pg.innerHTML = `
-${primeiro . quo ** (desejo - 1)}
+        div_resultado_da_pg.innerHTML = `
+${primeiro.quo ** (desejo - 1)}
 `}
 </script>

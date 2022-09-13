@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     Quanto é a passagem do ônibus? <br>
     <input id="valor_onibus"> <br>
@@ -16,13 +18,14 @@
     <button onclick="Calculo_vt ()">Calcular VT</button>
     <div id="resultado_vt"></div>
 
-    
+
 </body>
+
 </html>
 
 <script>
-    function Calculo_vt () {
-        var valor_bus = Number (valor_onibus.value)
+    function Calculo_vt() {
+        var valor_bus = Number(valor_onibus.value)
         var viagens = Number(qtd_viagens.value)
         var distancia = Number(distan.value)
         var viagens_app = viagens * 0.10
@@ -32,6 +35,6 @@
         var gasto_bus = viagens_bus * valor_bus
         var gasto_total = gasto_app + gasto_bus
 
-    resultado_vt.innerHTML = `${gasto_total}`
-}
+        resultado_vt.innerHTML = `${gasto_total}`
+    }
 </script>

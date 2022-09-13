@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    Digite a sua curiosidade: 
+    Digite a sua curiosidade:
     <input id='base_tabuada'>
 
     <button onclick="tabuada ()">
         Veja a tabuada!
     </button>
 
-<div id="resultados">
+    <div id="resultados">
 
-</div>
+    </div>
 
 
 </body>
+
 </html>
 
 
 
 
 <script>
-function tabuada () {
- var resultado = base_tabuada.value  
+    function tabuada() {
+        var resultado = base_tabuada.value
 
-resultados.innerHTML =` 
+        resultados.innerHTML = ` 
  ${base_tabuada.value} x 1 = ${resultado * 1} <br>
  ${base_tabuada.value} x 2 = ${resultado * 2} <br>
  ${base_tabuada.value} x 3 = ${resultado * 3} <br>
@@ -41,5 +44,5 @@ resultados.innerHTML =`
  ${base_tabuada.value} x 9 = ${resultado * 9}
  
  `
-}
+    }
 </script>

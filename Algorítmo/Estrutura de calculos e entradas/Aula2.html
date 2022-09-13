@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 2</title>
 </head>
+
 <body>
     <h1>Calculadora do ADSA</h1>
 
     Primeiro número (Base) <input id="input_n1">
     Segundo número (Expoente) <input id='input_n2'>
-    <button onclick= 'somar ()'>Somar</button>
-    <button onclick= 'subtrair ()'>Subtrair</button>
-    <button onclick= 'multiplicar ()'>Multiplicar</button>
-    <button onclick= 'dividir ()'>Dividir</button>
-    <button onclick= 'elevar ()'>Elevar</button>
+    <button onclick='somar ()'>Somar</button>
+    <button onclick='subtrair ()'>Subtrair</button>
+    <button onclick='multiplicar ()'>Multiplicar</button>
+    <button onclick='dividir ()'>Dividir</button>
+    <button onclick='elevar ()'>Elevar</button>
 
     <div id="resultado_calculadora">
-    
+
     </div>
-</body> 
+</body>
+
 </html>
 
 <script>
-    function somar () {
+    function somar() {
         resultado_calculadora.innerHTML =
             "O resultado é: " +
-            ((Number (input_n1.value) + Number (input_n2.value)))
+            ((Number(input_n1.value) + Number(input_n2.value)))
     }
-    function subtrair () {
+    function subtrair() {
         resultado_calculadora.innerHTML =
             'O resultado é: ' +
-            ((Number (input_n1.value) - Number (input_n2.value)))
+            ((Number(input_n1.value) - Number(input_n2.value)))
     }
-    function multiplicar () {
+    function multiplicar() {
         resultado_calculadora.innerHTML =
             "O resultado é: " +
-            ((Number (input_n1.value) * Number (input_n2.value)))
+            ((Number(input_n1.value) * Number(input_n2.value)))
     }
-    function dividir () {
+    function dividir() {
         resultado_calculadora.innerHTML =
             "O resultado é: " +
-            ((Number (input_n1.value) / Number (input_n2.value)))
+            ((Number(input_n1.value) / Number(input_n2.value)))
     }
-    function elevar () {
+    function elevar() {
         resultado_calculadora.innerHTML =
             "O resultado é: " +
-            ((Number (input_n1.value) ** Number (input_n2.value)))
+            ((Number(input_n1.value) ** Number(input_n2.value)))
     }
 </script>

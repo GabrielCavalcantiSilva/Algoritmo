@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div>
         <span> Valor guardado no cofrinho: R$</span> <b id="valor">0.00</b> <br>
         Quantidade de depositos feitos: <span id="qtd_deposito">0</span> <br>
         Quantidade de retiradas feitas: <span id="qtd_retir">0</span>
     </div>
-Quanto será depositado: <input id="valor_guardar"> <br>
-<button onclick="Guardar ()">Guardar</button> <button onclick="tirar_tudo ()">Tirar tudo</button>
+    Quanto será depositado: <input id="valor_guardar"> <br>
+    <button onclick="Guardar ()">Guardar</button> <button onclick="tirar_tudo ()">Tirar tudo</button>
 
 </body>
+
 </html>
 
 <script>
-var inicio = 0
-var deposito = 0
-var retirar = 0
-var depositos = 0
-function Guardar () {
+    var inicio = 0
+    var deposito = 0
+    var retirar = 0
+    var depositos = 0
+    function Guardar() {
         inicio += Number(valor_guardar.value)
         depositos += 1
-        qtd_deposito.innerHTML =` ${depositos}` 
-        valor.innerHTML =` ${inicio} ` 
+        qtd_deposito.innerHTML = ` ${depositos}`
+        valor.innerHTML = ` ${inicio} `
     }
 
-    function tirar_tudo (){
-     inicio = 0
-     retirar += 1
-     qtd_retir.innerHTML = `${retirar}`
-     valor.innerHTML =` ${inicio}`
+    function tirar_tudo() {
+        inicio = 0
+        retirar += 1
+        qtd_retir.innerHTML = `${retirar}`
+        valor.innerHTML = ` ${inicio}`
     }
 </script>
