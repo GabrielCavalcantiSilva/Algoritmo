@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width='device-width', initial-scale=1.0">
     <title>refrigerante</title>
 </head>
-<body>
-  Quantas latas por dia: <input type="text" id="input_qtd_latinhas"> <br>
-  <button onclick="calculo_latinhas ()">Quanto refris por ano?</button>  
-  <div id="acucares">
 
-  </div> 
+<body>
+    Quantas latas por dia: <input type="text" id="input_qtd_latinhas"> <br>
+    <button onclick="calculo_latinhas ()">Quanto refris por ano?</button>
+    <div id="acucares">
+
+    </div>
 </body>
+
 </html>
 
 <script>
-//a) Pergunte quantas latinhas de refrigerante toma por dia;
-//b) Ao clicar num botão "Quantos refris?", calcule a quantidade de refrigerante que ele consome em 1 ano, considerando que 1 ano possui 365 dias;
-//c) Exiba na página a quantidade de latinhas que ele consome por ano;
-//d) Somente caso a quantidade for a partir de 500, exiba também a frase: "Cuide melhor da sua saúde!"
-function calculo_latinhas () {
-var latas = Number (input_qtd_latinhas.value)
-var latas_ano = latas * 365
+    //a) Pergunte quantas latinhas de refrigerante toma por dia;
+    //b) Ao clicar num botão "Quantos refris?", calcule a quantidade de refrigerante que ele consome em 1 ano, considerando que 1 ano possui 365 dias;
+    //c) Exiba na página a quantidade de latinhas que ele consome por ano;
+    //d) Somente caso a quantidade for a partir de 500, exiba também a frase: "Cuide melhor da sua saúde!"
+    function calculo_latinhas() {
+        var latas = Number(input_qtd_latinhas.value)
+        var latas_ano = latas * 365
 
-if (latas_ano < 500) {
-    acucares.innerHTML = `Você toma por ano ${latas_ano} latinhas de refrigerante.`
-}
+        if (latas_ano < 500) {
+            acucares.innerHTML = `Você toma por ano ${latas_ano} latinhas de refrigerante.`
+        }
 
-if (latas_ano >= 500) {
-    acucares.innerHTML = `Você toma por ano ${latas_ano} latinhas de refrigerante.Cuide melhor da sua saúde!`
-}
+        if (latas_ano >= 500) {
+            acucares.innerHTML = `Você toma por ano ${latas_ano} latinhas de refrigerante.Cuide melhor da sua saúde!`
+        }
 
 
 
-}
+    }
 
 
 

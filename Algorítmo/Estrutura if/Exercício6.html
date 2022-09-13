@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     Valor da pizza: <input type="text" id="input_valor_pizza"> <br>
     Quantos amigos: <input type="text" id="input_qtd_amigos"> <br>
@@ -14,25 +16,26 @@
 
     </div>
 </body>
+
 </html>
 
 <script>
-//a) Pergunte o valor da pizza;
-//b) Pergunte a quantidade de amigos reunidos;
-//c) Ao clicar em "Rola a pizza?", calcule e exiba o valor que cada amigo vai pagar na pizza com uma frase na página como esta:
-//"Cada amigo vai pagar R$X pela pizza";
-//d) Caso o valor por amigo passe de R$20,00, exiba também a frase:
-//"Deu ruim! Pizza muito cara!";
-function resultado_pizza () {
-var valor_pizza = Number (input_valor_pizza.value)
-var qtd_amigos = Number (input_qtd_amigos.value)
-var valor_amigo = valor_pizza / qtd_amigos
- if (valor_amigo > 20) {
-    resultados.innerHTML = `Cada amigo vai pagar R$${valor_amigo} pela pizza. Deu ruim! Pizza muito cara!`
-}
-if (valor_amigo <= 20) {
-    resultados.innerHTML = `Cada amigo vai pagar R$${valor_amigo}.`
-} 
+    //a) Pergunte o valor da pizza;
+    //b) Pergunte a quantidade de amigos reunidos;
+    //c) Ao clicar em "Rola a pizza?", calcule e exiba o valor que cada amigo vai pagar na pizza com uma frase na página como esta:
+    //"Cada amigo vai pagar R$X pela pizza";
+    //d) Caso o valor por amigo passe de R$20,00, exiba também a frase:
+    //"Deu ruim! Pizza muito cara!";
+    function resultado_pizza() {
+        var valor_pizza = Number(input_valor_pizza.value)
+        var qtd_amigos = Number(input_qtd_amigos.value)
+        var valor_amigo = valor_pizza / qtd_amigos
+        if (valor_amigo > 20) {
+            resultados.innerHTML = `Cada amigo vai pagar R$${valor_amigo} pela pizza. Deu ruim! Pizza muito cara!`
+        }
+        if (valor_amigo <= 20) {
+            resultados.innerHTML = `Cada amigo vai pagar R$${valor_amigo}.`
+        }
 
-}
+    }
 </script>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     Quantas infrações você fez? <input type="text" id="input_qtd_infracoes"> <br>
     Qual o valor do carro? <input type="text" id="input_valor_carro"> <br>
@@ -16,28 +18,29 @@
 
     </div>
 </body>
+
 </html>
 
 
 <script>
-//a) Solicite a quantidade de infrações que o motorista já cometeu;
-//b) Solicite o valor do carro;
-//c) Ao clicar em "Calcular seguro", calcule exiba o valor do seguro, considerando que:
-//c.1) O valor do seguro é 1,5% do valor do carro;
-//c.2) Porém, se o motorista teve menos de 3 infrações, tem um desconto de 10% no valor do seguro
-function calculo_seguro () {
-var qtd_infracoes = Number (input_qtd_infracoes.value)
-var valor_carro = Number (input_valor_carro.value)
-var valor_seguro = valor_carro * 0.015
+    //a) Solicite a quantidade de infrações que o motorista já cometeu;
+    //b) Solicite o valor do carro;
+    //c) Ao clicar em "Calcular seguro", calcule exiba o valor do seguro, considerando que:
+    //c.1) O valor do seguro é 1,5% do valor do carro;
+    //c.2) Porém, se o motorista teve menos de 3 infrações, tem um desconto de 10% no valor do seguro
+    function calculo_seguro() {
+        var qtd_infracoes = Number(input_qtd_infracoes.value)
+        var valor_carro = Number(input_valor_carro.value)
+        var valor_seguro = valor_carro * 0.015
 
-if (qtd_infracoes < 3) {
-    //valor_seguro = valor_seguro * 0.90
-    //valor_seguro = valor_seguro - (valor_seguro * 0.1)
-    //valor_seguro *= 0.90
-    valor_seguro -= valor_seguro * 0.1
-}
-resultado.innerHTML = ` O valor do seu seguro é de R$${valor_seguro}
+        if (qtd_infracoes < 3) {
+            //valor_seguro = valor_seguro * 0.90
+            //valor_seguro = valor_seguro - (valor_seguro * 0.1)
+            //valor_seguro *= 0.90
+            valor_seguro -= valor_seguro * 0.1
+        }
+        resultado.innerHTML = ` O valor do seu seguro é de R$${valor_seguro}
 `
-}
+    }
 
 </script>

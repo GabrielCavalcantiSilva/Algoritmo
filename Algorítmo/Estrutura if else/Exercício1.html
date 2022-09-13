@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     Digite o seu nome: <input type="text" id="input_nome"> <br>
     Digite a sua idade: <input type="text" id="input_idade">
-    <button onclick="checagem ()" >Avaliar aluno</button>
+    <button onclick="checagem ()">Avaliar aluno</button>
     <div id="div_maioridade"></div>
 </body>
+
 </html>
 
 <script>
-//a) Solicite o nome e a idade de uma pessoa;
-//b) Ao clicar no botão "Avaliar aluno", se a pessoa tiver 18 anos ou mais emita a mensagem "FULANO vamos tirar a CNH?"; Caso contrário emita a mensagem "FULANO, você possui X% da idade necessária para tirar a CNH, vá jogar Playstation!";
-//Obs: X deve ser comparado á 18.
-function checagem () {
-    var nome = input_nome.value
-    var idade = Number (input_idade.value)
-    var checar_idade = (idade / 18) * 100
-    if (idade >= 18) {
-    div_maioridade.innerHTML = `${nome} vamos tirar a CNH?`
-} else {
-    div_maioridade.innerHTML = `${nome}, você possui ${checar_idade}% da idade necessária para tirar a CNH, vá jogar Playstation!`
-}
-}
+    //a) Solicite o nome e a idade de uma pessoa;
+    //b) Ao clicar no botão "Avaliar aluno", se a pessoa tiver 18 anos ou mais emita a mensagem "FULANO vamos tirar a CNH?"; Caso contrário emita a mensagem "FULANO, você possui X% da idade necessária para tirar a CNH, vá jogar Playstation!";
+    //Obs: X deve ser comparado á 18.
+    function checagem() {
+        var nome = input_nome.value
+        var idade = Number(input_idade.value)
+        var checar_idade = (idade / 18) * 100
+        if (idade >= 18) {
+            div_maioridade.innerHTML = `${nome} vamos tirar a CNH?`
+        } else {
+            div_maioridade.innerHTML = `${nome}, você possui ${checar_idade}% da idade necessária para tirar a CNH, vá jogar Playstation!`
+        }
+    }
 </script>

@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-  Quantas partidas ele jogou? <input type="text" id="input_qtd_jogos"> <br>
-  Quantos gols ele marcou? <input type="text" id="input_qtd_gols"> <br>
-  <button onclick="bao_ou_ruim ()">Estudar atacante</button>
-  <div id="div_resultado"></div>
-  <div id="div_media"></div>  
+    Quantas partidas ele jogou? <input type="text" id="input_qtd_jogos"> <br>
+    Quantos gols ele marcou? <input type="text" id="input_qtd_gols"> <br>
+    <button onclick="bao_ou_ruim ()">Estudar atacante</button>
+    <div id="div_resultado"></div>
+    <div id="div_media"></div>
 </body>
+
 </html>
 
 <script>
-//a) Solicita quantas partidas um atacante jogou;
-//b) Solicita quantos gols ele marcou;
-//c) Ao clicar em "Estudar atacante", calcule sua média de gols/partida;
-//d) Exiba, abaixo do botão:
-//A frase "Melhor mudar de posição" e a foto de um jogador de futebol bem ruim, caso a média for menor que 0.2;
-//A frase "Atacante mediano" e a foto de um jogador de futebol comum, caso a média for entre 0.2 e 0.6;
-//A frase "Atacante de futuro" e a foto de um bom jogador de futebol, caso a média for acima de 0.6;
-//e) Abaixo de tudo, exibir a frase "Sua média de gols/partida é de X";
-//Obs: X deve estar com 1 casa decimal.
-//Obs²: O desafio aqui é não utilizar 3 IFs e não utilizar nada que não vimos até agora.
-function bao_ou_ruim () {
-var partidas = Number (input_qtd_jogos.value)
-var gols =  Number (input_qtd_gols.value)
-var media_gols = gols / partidas
-if (media_gols < 0.2) {
-    div_resultado.innerHTML = `Melhor mudar de posição <br>
+    //a) Solicita quantas partidas um atacante jogou;
+    //b) Solicita quantos gols ele marcou;
+    //c) Ao clicar em "Estudar atacante", calcule sua média de gols/partida;
+    //d) Exiba, abaixo do botão:
+    //A frase "Melhor mudar de posição" e a foto de um jogador de futebol bem ruim, caso a média for menor que 0.2;
+    //A frase "Atacante mediano" e a foto de um jogador de futebol comum, caso a média for entre 0.2 e 0.6;
+    //A frase "Atacante de futuro" e a foto de um bom jogador de futebol, caso a média for acima de 0.6;
+    //e) Abaixo de tudo, exibir a frase "Sua média de gols/partida é de X";
+    //Obs: X deve estar com 1 casa decimal.
+    //Obs²: O desafio aqui é não utilizar 3 IFs e não utilizar nada que não vimos até agora.
+    function bao_ou_ruim() {
+        var partidas = Number(input_qtd_jogos.value)
+        var gols = Number(input_qtd_gols.value)
+        var media_gols = gols / partidas
+        if (media_gols < 0.2) {
+            div_resultado.innerHTML = `Melhor mudar de posição <br>
         <img src = "https://miro.medium.com/max/800/1*nCAkndO1TdnGxY6G3sST-Q.jpeg">`
-} else {
-    if (media_gols < 0.6) {
-        div_resultado.innerHTML = `Atacante mediano <br>
+        } else {
+            if (media_gols < 0.6) {
+                div_resultado.innerHTML = `Atacante mediano <br>
         <img src = "https://s.yimg.com/ny/api/res/1.2/n0uX1JGN.oMUHkAwzCRnrw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://s.yimg.com/os/creatr-uploaded-images/2020-12/bfec4d80-3f45-11eb-bbfb-fc512f6b2949">`
-    }
-    else {
-        div_resultado.innerHTML = `Atacante de futuro <br>
+            }
+            else {
+                div_resultado.innerHTML = `Atacante de futuro <br>
     <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Karim_Benzema_wearing_Real_Madrid_home_kit_2021-2022.jpg/250px-Karim_Benzema_wearing_Real_Madrid_home_kit_2021-2022.jpg">`
+            }
+        }
+        div_media.innerHTML = `Sua média gols/partida é de ${media_gols}`
     }
-}
-div_media.innerHTML = `Sua média gols/partida é de ${media_gols}`
-}
 </script>
