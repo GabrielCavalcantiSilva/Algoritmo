@@ -1,26 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <button onclick="NUm ()">Nota 1</button> <button onclick="NDo ()">Nota 2</button> <button onclick="NTr">Nota 3</button> <button onclick="NQt">Nota 4</button> <button onclick="NCi">Nota 5
-    </button>
-    <div>Sua avaliação:</div>    
+    <button onclick="NUm ()">Nota 1</button>
+    <button onclick="NDo ()">Nota 2</button>
+    <button onclick="NTr ()">Nota 3</button>
+    <button onclick="NQt ()">Nota 4</button>
+    <button onclick="NCi ()">Nota 5</button>
+    <div>Sua avaliação: <span id="resultado_media">0</span></div>
+    <div id="reacoes"></div>
 </body>
+
 </html>
 <script>
-//Crie um pequeno sistema de avaliação de atendimento em HTML/JS o qual:
-//a) Tem cinco botões: "Nota 1", "Nota 2", "Nota 3", "Nota 4" e "Nota 5"
-//b) Abaixo deles, um texto: "Sua avaliação:"
-//c) Cada vez que o usuário for clicando em um dos botões, é atualizada a média de todas as avaliações recebidas, e o texto em b) se atualiza para algo como "Sua avaliação: 3.4" (use sempre 1 casa decimal)
-//d) De acordo com a média atual, exiba ou altere uma figura abaixo de tudo, que pode ser:
-//De alguém chorando ou desesperado, caso a média esteja abaixo de 2.
-//De alguém "neutro", caso a média esteja entre 2 e 3.
-//De alguém feliz, caso a média seja entre mais de 3 e 4.5.
-//De radiante, mega feliz, caso a média esteja acima de 4.5.
-
+    //Crie um pequeno sistema de avaliação de atendimento em HTML/JS o qual:
+    //a) Tem cinco botões: "Nota 1", "Nota 2", "Nota 3", "Nota 4" e "Nota 5"
+    //b) Abaixo deles, um texto: "Sua avaliação:"
+    //c) Cada vez que o usuário for clicando em um dos botões, é atualizada a média de todas as avaliações recebidas, e o texto em b) se atualiza para algo como "Sua avaliação: 3.4" (use sempre 1 casa decimal)
+    //d) De acordo com a média atual, exiba ou altere uma figura abaixo de tudo, que pode ser:
+    //De alguém chorando ou desesperado, caso a média esteja abaixo de 2.
+    //De alguém "neutro", caso a média esteja entre 2 e 3.
+    //De alguém feliz, caso a média seja entre mais de 3 e 4.5.
+    //De radiante, mega feliz, caso a média esteja acima de 4.5.
+    var avaliacao = 0
+    var cliques = 0
+    var media_avaliacao = 0
+    function NUm() {
+        cliques += 1
+        avaliacao += 1
+        media_avaliacao = avaliacao / cliques
+        resultado_media.innerHTML = `${media_avaliacao.toFixed(1)}`
+        if (media_avaliacao < 2) {
+            reacoes.innerHTML = `<img src="https://s2.glbimg.com/V7rZrxov7m5d0Bzxyf7x5XSkPW8=/0x0:1920x1280/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/q/j/gcOImnQBiarcAzwd8C5w/boy-1666611-1920.jpg">`
+        } else if (media_avaliacao < 3) {
+            reacoes.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Face_of_SpooSpa.jpg/250px-Face_of_SpooSpa.jpg">`
+        } else if (media_avaliacao < 4.5) {
+            reacoes.innerHTML = `<img src="https://veja.abril.com.br/wp-content/uploads/2017/07/saude-felicidade-20170725-001.jpg">`
+        } else {
+            reacoes.innerHTML = `<img src="https://www.arita.com.br/wp-content/uploads/2018/10/como-ser-feliz-x-habitos-das-pessoas-verdadeiramente-felizes-5.png">`
+        }
+    }
+    function NDo() {
+        cliques += 1
+        avaliacao += 2
+        media_avaliacao = avaliacao / cliques
+        resultado_media.innerHTML = `${media_avaliacao.toFixed(1)}`
+        if (media_avaliacao < 2) {
+            reacoes.innerHTML = `<img src="https://s2.glbimg.com/V7rZrxov7m5d0Bzxyf7x5XSkPW8=/0x0:1920x1280/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/q/j/gcOImnQBiarcAzwd8C5w/boy-1666611-1920.jpg">`
+        } else if (media_avaliacao < 3) {
+            reacoes.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Face_of_SpooSpa.jpg/250px-Face_of_SpooSpa.jpg">`
+        } else if (media_avaliacao < 4.5) {
+            reacoes.innerHTML = `<img src="https://veja.abril.com.br/wp-content/uploads/2017/07/saude-felicidade-20170725-001.jpg">`
+        } else {
+            reacoes.innerHTML = `<img src="https://www.arita.com.br/wp-content/uploads/2018/10/como-ser-feliz-x-habitos-das-pessoas-verdadeiramente-felizes-5.png">`
+        }
+    }
+    function NTr() {
+        cliques += 1
+        avaliacao += 3
+        
+        media_avaliacao = avaliacao / cliques
+        resultado_media.innerHTML = `${media_avaliacao.toFixed(1)}`
+        if (media_avaliacao < 2) {
+            reacoes.innerHTML = `<img src="https://s2.glbimg.com/V7rZrxov7m5d0Bzxyf7x5XSkPW8=/0x0:1920x1280/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/q/j/gcOImnQBiarcAzwd8C5w/boy-1666611-1920.jpg">`
+        } else if (media_avaliacao < 3) {
+            reacoes.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Face_of_SpooSpa.jpg/250px-Face_of_SpooSpa.jpg">`
+        } else if (media_avaliacao < 4.5) {
+            reacoes.innerHTML = `<img src="https://veja.abril.com.br/wp-content/uploads/2017/07/saude-felicidade-20170725-001.jpg">`
+        } else {
+            reacoes.innerHTML = `<img src="https://www.arita.com.br/wp-content/uploads/2018/10/como-ser-feliz-x-habitos-das-pessoas-verdadeiramente-felizes-5.png">`
+        }
+    }
+    function NQt() {
+        cliques += 1
+        avaliacao += 4
+        
+        media_avaliacao = avaliacao / cliques
+        resultado_media.innerHTML = `${media_avaliacao.toFixed(1)}`
+        if (media_avaliacao < 2) {
+            reacoes.innerHTML = `<img src="https://s2.glbimg.com/V7rZrxov7m5d0Bzxyf7x5XSkPW8=/0x0:1920x1280/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/q/j/gcOImnQBiarcAzwd8C5w/boy-1666611-1920.jpg">`
+        } else if (media_avaliacao < 3) {
+            reacoes.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Face_of_SpooSpa.jpg/250px-Face_of_SpooSpa.jpg">`
+        } else if (media_avaliacao < 4.5) {
+            reacoes.innerHTML = `<img src="https://veja.abril.com.br/wp-content/uploads/2017/07/saude-felicidade-20170725-001.jpg">`
+        } else {
+            reacoes.innerHTML = `<img src="https://www.arita.com.br/wp-content/uploads/2018/10/como-ser-feliz-x-habitos-das-pessoas-verdadeiramente-felizes-5.png">`
+        }
+    }
+    function NCi() {
+        cliques += 1
+        avaliacao += 5
+        
+        media_avaliacao = avaliacao / cliques
+        resultado_media.innerHTML = `${media_avaliacao.toFixed(1)}`
+        if (media_avaliacao < 2) {
+            reacoes.innerHTML = `<img src="https://s2.glbimg.com/V7rZrxov7m5d0Bzxyf7x5XSkPW8=/0x0:1920x1280/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/q/j/gcOImnQBiarcAzwd8C5w/boy-1666611-1920.jpg">`
+        } else if (media_avaliacao < 3) {
+            reacoes.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Face_of_SpooSpa.jpg/250px-Face_of_SpooSpa.jpg">`
+        } else if (media_avaliacao < 4.5) {
+            reacoes.innerHTML = `<img src="https://veja.abril.com.br/wp-content/uploads/2017/07/saude-felicidade-20170725-001.jpg">`
+        } else {
+            reacoes.innerHTML = `<img src="https://www.arita.com.br/wp-content/uploads/2018/10/como-ser-feliz-x-habitos-das-pessoas-verdadeiramente-felizes-5.png">`
+        }
+}
 </script>
