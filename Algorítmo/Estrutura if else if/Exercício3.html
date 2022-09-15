@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite a sua altura: <input type="text" id="input_altura">
+    <button onclick="checar_altura ()">Quais esportes?</button>
+    <div id="div_esporte">
+    </div>
+</body>
+
+</html>
+<script>
+    //b) Ao clicar no botão "Quais esportes ?" deve aparecer abaixo uma dessas frases:
+    //   "Você pode ser piloto de corrida" (altura até 1.65)
+    //   "Você pode ser jogador de futebol" (altura +1.65 até 1.80)
+    //   "Você pode ser jogador de vôlei ou basquete" (altura + 1.80)
+    function checar_altura() {
+        var altura = Number(input_altura.value)
+        if (altura <= 1.65) {
+            div_esporte.innerHTML = `<span style="color: blue">Você pode ser piloto de corrida</span>`
+        } else
+            if (altura <= 1.85) {
+                div_esporte.innerHTML = `<span style="color: green"> Você pode ser jogador de futebol </span>`
+            } else {
+                div_esporte.innerHTML = `<span style="color: orange">Você pode ser jogador de vôlei ou basquete</span>`
+            }
+        }
+
+</script>

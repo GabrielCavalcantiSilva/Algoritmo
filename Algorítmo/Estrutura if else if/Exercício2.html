@@ -25,30 +25,18 @@
     //   "Classe B" (+2500 até 9500)
     //   "Classe A" (+9500)
     function bolsa_familia() {
-        var renda = Number(input_renda_familia.value)
-        var classes = "0"
+        var renda_mensal = Number(input_renda_familia.value)
 
-        if (renda > 9500) {
-            classes = "Classe A"
+        if (renda_mensal > 9500) {
+            div_classe.innerHTML = `Classe A`
+        } else if (renda_mensal > 2500) {
+            div_classe.innerHTML = `Classe B`
+        } else if (renda_mensal > 900) {
+            div_classe.innerHTML = `Classe C`
+        } else if (renda_mensal > 250) {
+            div_classe.innerHTML = `Classe D`
         } else {
-            if (renda > 2500)
-                classe = "Classe B"
-            else {
-                if (renda > 900) {
-                    classe = "Classe C"
-                } else {
-                    if (renda > 250) {
-                        classe = "Classe D"
-                    } else {
-                        if (renda <= 250) {
-                            classe = "Classe E"
-                        }
-                    }
-                }
-            }
-
+            div_classe.innerHTML = `Classe E`
         }
-
-        div_classe.innerHTML = classes
-    }
+    }        
 </script>

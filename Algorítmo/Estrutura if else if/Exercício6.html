@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Peso da criança: <input type="text" id="input_crianca_gordinha"> 
+    <button onclick="palito_ou_forte ()">Verificar peso</button>
+    <div id="engordou"></div>
+</body>
+</html>
+
+<script>
+//Dra Renata é nutróloga e quer um programa que a ajude a avaliar o peso de crianças de 5 anos. Ajude-a com um programa que, ao ler o peso de um desses pacientes, exiba uma dessas frases:
+//Abaixo do peso (se peso até 13.5kg)
+//Acima do peso (se peso maior que 21.2kg)
+//Peso na média (se peso maior que 13.5kg até 21.2kg)
+//Peso perfeito (se o peso for exatamente 18.3kg)
+function palito_ou_forte () {
+    var peso = Number (input_crianca_gordinha.value)
+    if (peso <= 13.5) {
+        engordou.innerHTML = `Abaixo do peso`
+    }  else if (peso == 18.3) {
+        engordou.innerHTML = `Peso perfeito` 
+    }   
+    else if (peso < 21.2) {
+        engordou.innerHTML = `Peso na média`
+    }
+     else {
+        engordou.innerHTML = `Acima do peso`
+     } 
+}
+</script>

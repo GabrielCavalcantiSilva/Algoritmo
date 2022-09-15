@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos pães franceses tem comido por dia: <input type="text" id="input_qtd_paes"> <br>
+    Quantos pacotes de bolacha recheada tem comido por dia: <input type="text" id="input_qtd_bolacha"> <br>
+    Quantos copos de achocolatado tem tomado por dia: <input type="text" id="input_qtd_achocolatado"> <br>
+    <button onclick="ver_calorias ()">Verificar calorias</button>
+    <div id="div_resultado_calorias"></div>
+</body>
+</html>
+<script>
+//Olivia Souza é nutricionisa e precisa ajudar seus pacientes em suas dietas. Ajude-a criando um programa em HTML/JS o qual:
+//a) Pergunte quantos pães franceses o usuário tem comido por dia;
+//b) Pergunte quantos pacotes de bolacha recheada o usuário tem comido por dia;
+//c) Pergunte quantos copos de achocolatado o usuário tem tomado por dia;
+//d) Ao clicar em "Verificar calorias", calcule quantas calorias o usuário tem consumido com base nas 3 informações. Considere que um pão francês tem 50 calorias, um pacote de bolacha, 80 e um copo de achocolatado, 70.
+//e) Após fazer o cálculo, exiba uma dessas frases, abaixo do botão:
+//"Está perdendo peso", caso as calorias sejam menores do que 200.
+//"Nem lá, nem cá. Vai manter a forma.", caso as calorias sejam entre 200 e 400.
+//"Forte tendência á ganhar peso !", caso as calorias sejam mais de 400.
+function ver_calorias () {
+ var qtd_paes = Number (input_qtd_paes.value)
+ var qtd_bolacha = Number (input_qtd_bolacha.value)
+ var qtd_achocolatado = Number (input_qtd_achocolatado.value)   
+
+var calorias_pao = qtd_paes * 50
+var calorias_bolacha = qtd_bolacha * 80
+var calorias_achocolatado = qtd_achocolatado * 70
+var caloria_total = calorias_achocolatado + calorias_bolacha + calorias_pao
+if (caloria_total < 200) {
+    div_resultado_calorias.innerHTML = `Está perdendo peso`
+} else if (caloria_total < 400) {
+    div_resultado_calorias.innerHTML = `Nem lá, nem cá. Vai manter a forma`
+} else {
+    div_resultado_calorias.innerHTML = `Forte tendência a ganhar peso!`
+}
+}
+</script>
