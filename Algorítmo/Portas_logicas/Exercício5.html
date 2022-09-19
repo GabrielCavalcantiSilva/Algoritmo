@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   Insira a sua renda: <input type="text" id="input_renda_individual"> <br>
+   Insira a renda da sua família: <input type="text" id="input_renda_familia"> <button onclick="beneficio ()">Terei o benefício?</button>
+   <div id="div_bolsa_familia"></div> 
+</body>
+</html>
+<script>
+//a) Solicite o valor da renda individual do usuário;
+//b) Solicite o valor da renda familiar do usuário;
+//c) Ao clicar em "Terei o benefício ?", podem aparecer as seguintes mensagens:
+//"Você terá direito ao auxílio", caso renda individual for até 2000 ou caso a renda familiar for até 3000.
+//"Sem direito ao auxílio", caso contrário.
+function beneficio () {
+    var renda_individual = Number (input_renda_individual.value)
+    var renda_familia = Number (input_renda_familia.value)
+    if (renda_familia <= 3000 && renda_individual <= 2000) {
+        div_bolsa_familia.innerHTML = `Você terá direito ao auxílio!` 
+    } else {
+        div_bolsa_familia.innerHTML = `Sem direito ao auxílio.`
+    }
+}
+</script>
