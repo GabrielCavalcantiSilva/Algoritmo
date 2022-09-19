@@ -32,11 +32,12 @@
     var avaliacao = 0
     var cliques = 0
     var media_avaliacao = 0
-    function NUm() {
-        cliques += 1
-        avaliacao += 1
+    function atualiar_media() {
         media_avaliacao = avaliacao / cliques
         resultado_media.innerHTML = `${media_avaliacao.toFixed(1)}`
+        atualizar_imagem()
+    }
+    function atualizar_imagem() {
         if (media_avaliacao < 2) {
             reacoes.innerHTML = `<img src="https://s2.glbimg.com/V7rZrxov7m5d0Bzxyf7x5XSkPW8=/0x0:1920x1280/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/q/j/gcOImnQBiarcAzwd8C5w/boy-1666611-1920.jpg">`
         } else if (media_avaliacao < 3) {
@@ -46,68 +47,31 @@
         } else {
             reacoes.innerHTML = `<img src="https://www.arita.com.br/wp-content/uploads/2018/10/como-ser-feliz-x-habitos-das-pessoas-verdadeiramente-felizes-5.png">`
         }
+    }
+    function NUm() {
+        cliques += 1
+        avaliacao += 1
+        atualizar_media()
     }
     function NDo() {
         cliques += 1
         avaliacao += 2
-        media_avaliacao = avaliacao / cliques
-        resultado_media.innerHTML = `${media_avaliacao.toFixed(1)}`
-        if (media_avaliacao < 2) {
-            reacoes.innerHTML = `<img src="https://s2.glbimg.com/V7rZrxov7m5d0Bzxyf7x5XSkPW8=/0x0:1920x1280/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/q/j/gcOImnQBiarcAzwd8C5w/boy-1666611-1920.jpg">`
-        } else if (media_avaliacao < 3) {
-            reacoes.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Face_of_SpooSpa.jpg/250px-Face_of_SpooSpa.jpg">`
-        } else if (media_avaliacao < 4.5) {
-            reacoes.innerHTML = `<img src="https://veja.abril.com.br/wp-content/uploads/2017/07/saude-felicidade-20170725-001.jpg">`
-        } else {
-            reacoes.innerHTML = `<img src="https://www.arita.com.br/wp-content/uploads/2018/10/como-ser-feliz-x-habitos-das-pessoas-verdadeiramente-felizes-5.png">`
-        }
+        atualizar_media()
+
     }
     function NTr() {
         cliques += 1
         avaliacao += 3
-        
-        media_avaliacao = avaliacao / cliques
-        resultado_media.innerHTML = `${media_avaliacao.toFixed(1)}`
-        if (media_avaliacao < 2) {
-            reacoes.innerHTML = `<img src="https://s2.glbimg.com/V7rZrxov7m5d0Bzxyf7x5XSkPW8=/0x0:1920x1280/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/q/j/gcOImnQBiarcAzwd8C5w/boy-1666611-1920.jpg">`
-        } else if (media_avaliacao < 3) {
-            reacoes.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Face_of_SpooSpa.jpg/250px-Face_of_SpooSpa.jpg">`
-        } else if (media_avaliacao < 4.5) {
-            reacoes.innerHTML = `<img src="https://veja.abril.com.br/wp-content/uploads/2017/07/saude-felicidade-20170725-001.jpg">`
-        } else {
-            reacoes.innerHTML = `<img src="https://www.arita.com.br/wp-content/uploads/2018/10/como-ser-feliz-x-habitos-das-pessoas-verdadeiramente-felizes-5.png">`
-        }
+        atualizar_media()
     }
     function NQt() {
         cliques += 1
         avaliacao += 4
-        
-        media_avaliacao = avaliacao / cliques
-        resultado_media.innerHTML = `${media_avaliacao.toFixed(1)}`
-        if (media_avaliacao < 2) {
-            reacoes.innerHTML = `<img src="https://s2.glbimg.com/V7rZrxov7m5d0Bzxyf7x5XSkPW8=/0x0:1920x1280/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/q/j/gcOImnQBiarcAzwd8C5w/boy-1666611-1920.jpg">`
-        } else if (media_avaliacao < 3) {
-            reacoes.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Face_of_SpooSpa.jpg/250px-Face_of_SpooSpa.jpg">`
-        } else if (media_avaliacao < 4.5) {
-            reacoes.innerHTML = `<img src="https://veja.abril.com.br/wp-content/uploads/2017/07/saude-felicidade-20170725-001.jpg">`
-        } else {
-            reacoes.innerHTML = `<img src="https://www.arita.com.br/wp-content/uploads/2018/10/como-ser-feliz-x-habitos-das-pessoas-verdadeiramente-felizes-5.png">`
-        }
+        atualizar_media()
     }
     function NCi() {
         cliques += 1
         avaliacao += 5
-        
-        media_avaliacao = avaliacao / cliques
-        resultado_media.innerHTML = `${media_avaliacao.toFixed(1)}`
-        if (media_avaliacao < 2) {
-            reacoes.innerHTML = `<img src="https://s2.glbimg.com/V7rZrxov7m5d0Bzxyf7x5XSkPW8=/0x0:1920x1280/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/q/j/gcOImnQBiarcAzwd8C5w/boy-1666611-1920.jpg">`
-        } else if (media_avaliacao < 3) {
-            reacoes.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Face_of_SpooSpa.jpg/250px-Face_of_SpooSpa.jpg">`
-        } else if (media_avaliacao < 4.5) {
-            reacoes.innerHTML = `<img src="https://veja.abril.com.br/wp-content/uploads/2017/07/saude-felicidade-20170725-001.jpg">`
-        } else {
-            reacoes.innerHTML = `<img src="https://www.arita.com.br/wp-content/uploads/2018/10/como-ser-feliz-x-habitos-das-pessoas-verdadeiramente-felizes-5.png">`
-        }
-}
+        atualizar_media()
+    }
 </script>
