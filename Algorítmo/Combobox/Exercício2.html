@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    O que você vai beber?
+    <select id="select_bebida">
+        <option value="0">Nenhuma</option>
+        <option value="2">Água</option>
+        <option value="6">Refrigerante</option>
+        <option value="8">Cerveja</option>
+    </select> <br>
+    O que você vai comer?
+    <select id="select_comida">
+        <option value="8">Salada</option>
+        <option value="14">Feijoada</option>
+        <option value="16">Bife a Cavalo</option>
+        <option value="12">Peixe Frito</option>
+    </select> <br>
+    Insira seu nome<input type="text" id="input_nome">
+    <button onclick="calculo ()">Calcular preço</button>
+    <div id="div_resultado"></div>
+</body>
+
+</html>
+
+<script>
+    function calculo() {
+
+        var bebida = select_bebida.value
+        var comida = select_comida.value
+
+        div_resultado.innerHTML = `${bebida + comida}`
+    }
+</script>

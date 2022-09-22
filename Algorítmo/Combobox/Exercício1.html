@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="Meses" id="select_meses">
+        <option value="inv">Janeiro</option>
+        <option value="inv">Fevereiro</option>
+        <option value="prim">Março</option>
+        <option value="prim">Abril</option>
+        <option value="prim">Maio</option>
+        <option value="ver">Junho</option>
+        <option value="ver">Julho</option>
+        <option value="ver">Agosto</option>
+        <option value="out">Setembro</option>
+        <option value="out">Outubro</option>
+        <option value="out">Novembro</option>
+        <option value="inv">Dezembro</option>
+    </select> <br>
+    <button onclick="ver_estacao ()">Ver estação</button>
+    <div id="div_estacao"></div>
+</body>
+
+</html>
+
+<script>
+    function ver_estacao() {
+
+        var itens = select_meses.value
+
+        if (itens == "inv") {
+            div_estacao.innerHTML = `Inverno`
+        } else if (itens == "prim") {
+            div_estacao.innerHTML = `Primavera`
+        } else if (itens == "ver") {
+            div_estacao.innerHTML = `Verão`
+        } else { div_estacao.innerHTML = `Outono` }
+    }
+</script>

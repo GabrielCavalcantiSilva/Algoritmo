@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira a temperatura: <input type="text" id="input_temperatura"> <br>
+    Insira a umidade do ar: <input type="text" id="input_umidade"> <button onclick="climinha ()">Avaliar clima</button>
+    <div id="div_clima"></div>
+</body>
+
+</html>
+
+<script>
+    //a) Solicite a temperatura;
+    //b) Solicite a umidade do ar;
+    //c) Ao clicar em 'Avaliar clima':
+    //c.1) Caso a umidade for inválida, ou seja, menor que 0 e maior que 100, exiba um alert "Valor de umidade inválido" e limpe qualquer outro texto que exista na tela (item c.2)
+    //c.2) Caso a umidade for válida, exiba uma dessas frases na própria página, abaixo do botão:
+    //"Clima agradável", caso a temperatura for entre 22 e 23 e a umidade for menor que 60.
+    //"Clima desconfortável", em caso contrário. 
+    function climinha() {
+        var temperatura = Number(input_temperatura.value)
+        var umidade = Number(input_umidade.value)
+
+        if (umidade < 0 || umidade > 100) {
+            alert(`Valor de umidade inválido!`)
+            div_clima.innerHTML = ``
+        } else if (temperatura >= 22 && temperatura <= 23 && umidade < 60) {
+            div_clima.innerHTML = `Clima agradável`
+        } else {
+            div_clima.innerHTML = `Clima desconfortável`
+        }
+
+    }
+</script>

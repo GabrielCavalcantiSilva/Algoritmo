@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-   Insira a sua renda: <input type="text" id="input_renda"> <br>
-   insira a renda total da sua família: <input type="text" id="input_renda_familia"> <br>
-   <button onclick="bolsa_familia ()">Verificar ajuda</button> 
+    Insira a sua renda: <input type="text" id="input_renda"> <br>
+    insira a renda total da sua família: <input type="text" id="input_renda_familia"> <br>
+    <button onclick="bolsa_familia ()">Verificar ajuda</button>
 </body>
+
 </html>
 <script>
-//a) Solicite renda do usuário;
-//b) Solicite a renda total familiar do usuário;
-//c) Ao clicar em "Verificar ajuda", exibe um alert com uma dessas mensagens:
-//"Você terá direito!", caso a renda do usuário for até 1050 E a renda familiar for até 2100.
-//"Você NÃO terá direito", caso contrário.
-function bolsa_familia () {
-    var renda = Number (input_renda.value)
-    var renda_familia = Number (input_renda_familia.value)
-    if (renda <= 1050 && renda_familia <= 2100) {
-        alert ("Você terá direito!")
-    } else {
-        alert ("Você NÃO terá direito")
+    //a) Solicite renda do usuário;
+    //b) Solicite a renda total familiar do usuário;
+    //c) Ao clicar em "Verificar ajuda", exibe um alert com uma dessas mensagens:
+    //"Você terá direito!", caso a renda do usuário for até 1050 E a renda familiar for até 2100.
+    //"Você NÃO terá direito", caso contrário.
+    function bolsa_familia() {
+        var renda = Number(input_renda.value)
+        var renda_familia = Number(input_renda_familia.value)
+        if (renda <= 1050 && renda_familia <= 2100) {
+            alert("Você terá direito!")
+        } else {
+            alert("Você NÃO terá direito")
+        }
     }
-}
 </script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+Qual o tipo de arroz: <select id="select_arroz">
+    <option value="branco">Branco</option>
+    <option value="integral">Integral</option>
+</select> <br>
+Tempo de cozimento (em minutos): <input type="text" id="input_tempo_cozimento"> <br>
+Quantidade de sal utilizada (em gramas): <input type="text" id="input_sal">
+<button onclick="arrozinho_hmmm ()">Avaliar arroz</button>
+<div id="div_arroz"></div>
+
+<body>
+    <img src="">
+</body>
+
+</html>
+
+<script>
+    //OBS: Use, necessariamente pelo menos um "ou" (||)
+    //a) Pergunte numa combo o tipo de arroz usado (integral ou branco);
+    //b) Pergunte o tempo de cozimento, em minutos;
+    //c) Pergunte a quantidade de sal usada, em gramas;
+    //d) Ao clicar em "Avaliar arroz", exiba, abaixo dele...
+    //A frase "Arroz perfeito", caso:
+    //Em caso de arroz branco, 10 minutos e até 10g de sal;
+    //Em caso de arroz integral, 20 minutos e até 15g de sal;
+    //A frase "Seu arroz não está perfeito", caso nenhum dos critérios anteriores tenha sido alcançado
+    //e) No caso de arroz perfeito, exiba também a imagem de um belo arroz, branco ou integral, conforme o tipo selecionado. Caso contrário, exiba a cara do Jacquin bravo (aquele famoso meme), independe do tipo de arroz.
+    function arrozinho_hmmm() {
+
+        var arroz = select_arroz.value
+        var tempo = Number(input_tempo_cozimento.value)
+        var sal = Number(input_sal.value)
+
+
+        if ((arroz == "Branco" && tempo == 10 && sal <= 10) || (arroz == "Integral" && tempo >= 20 && sal <= 15)) {
+            div_arroz.innerHTML = `Arroz perfeito! <img src="https://3.bp.blogspot.com/-EoDapwUDeHo/WfCH-zQFMSI/AAAAAAAABCE/PcXO-PbmAJk9TAPoCLowA82YPYBwgj7nQCLcBGAs/s1600/arroz-branco-soltinho-1016-1400x800.jpg">`
+        } else { div_arroz.innerHTML = `arroz não está perfeito <img src = "https://3.bp.blogspot.com/-EoDapwUDeHo/WfCH-zQFMSI/AAAAAAAABCE/PcXO-PbmAJk9TAPoCLowA82YPYBwgj7nQCLcBGAs/s1600/arroz-branco-soltinho-1016-1400x800.jpg"` }
+    }
+</script>
