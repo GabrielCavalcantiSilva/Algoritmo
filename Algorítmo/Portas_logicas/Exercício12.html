@@ -39,14 +39,15 @@
             alert("Onde já se viu frequência menor que zero ou maior que cem?!")
             div_aprovacao.innerHTML = ``
             div_nota.innerHTML = ``
-        } else if (nota < 6) {
-            div_nota.innerHTML = `Aluno ficou abaixo da média`
-        } else if (nota < 8) {
-            div_nota.innerHTML = `Aluno ficou na média`
-        } else {div_nota.innerHTML = `Aluno acima da média`}
-        if (frequencia >= 75) {
-            div_aprovacao.innerHTML = `<br> Aluno aprovado por frequência`
-        } else {div_aprovacao.innerHTML = `<br> Aluno reprovado por frequência`}
+        } else {
+            if (nota >= 0 && nota < 6) {
+                div_nota.innerHTML = `Aluno ficou abaixo da média`
+            } else if (nota >= 6 && nota < 8) {
+                div_nota.innerHTML = `Aluno ficou na média`
+            } else { div_nota.innerHTML = `Aluno acima da média` }
+            if (frequencia >= 75) {
+                div_aprovacao.innerHTML = `<br> Aluno aprovado por frequência`
+            } else { div_aprovacao.innerHTML = `<br> Aluno reprovado por frequência` }
+        }
     }
-
 </script>
