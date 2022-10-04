@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" id="input_dias_musculacao"> <button onclick="perna_fina ()">Exibir rotina mensal</button>
+   <div id="div_dias"></div> 
+</body>
+</html>
+<script>
+//a) Pergunte de quantos em quantos dias o usuário faz musculação (é só uma informação, só um número, ok?);
+//b) Ao clicar em "Exibir rotina mensal", mostre uma sequência de 30 frases, como neste exemplo:
+//Dia 1 - Musculação
+//Dia 2 - Comer, dormir etc
+//Dia 3 - Comer, dormir etc
+//Dia 4 - Musculação
+//Dia 5 - Comer, dormir etc
+//Dia 6 - Comer, dormir etc
+//Dia 7 - Musculação
+//...
+//Dia 30 - Comer, dormir etc
+//O Dia 1 sempre é de "Musculação"
+//Considere que, nesse exemplo, o usuário informou 3 no item a)
+function perna_fina () {
+    var dias_musculacao = Number(input_dias_musculacao.value)
+    var contagem = 1
+    var contagem2 = 0
+    while (contagem2 < 30) {
+        contagem2 +=1
+        div_dias.innerHTML += `Dia ${contagem2} - Comer, dormir etc. <br>`
+    }
+    while (contagem < dias_musculacao) {
+        contagem += 1
+    }
+    if (contagem == contagem2) {
+        div_dias.innerHTML = `Dia ${contagem2}- Musculação`
+    }
+}
+</script>

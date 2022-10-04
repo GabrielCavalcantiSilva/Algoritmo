@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira um número: <input id="input_valor_recebido"> <br>
+    Insira uma frase: <input id="input_frase_recebida" onkeypress="verificar ()"> <br>
+    <button onclick="falatorio ()">Papagaio</button>
+</body>
+</html>
+<script>
+function verificar () {
+    var frase_recebida = input_frase_recebida.value
+    if (frase_recebida.length < 3) {
+        alert ("A frase tem que ter mais do que 3 caracteres!")
+    }
+}
+function falatorio () {
+    var frase_recebida = input_frase_recebida.value
+    var valor_recebido = Number (input_valor_recebido.value)
+    var contagem = 0
+    while (contagem < valor_recebido) {
+        alert (`${frase_recebida}`)
+        contagem +=1
+    }
+}
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Quantas pessoas vão entrar no carro: <input type="text" id="input_qtd_pessoas"> <br>
+    A capacidade do véiculo: <input type="text" id="input_capacidade">
+    <button onclick="carona ()">#Partiu
+        Carona</button>
+    <div id="div_passageiros">
+        1º passageiro, motorista
+    </div>
+</body>
+
+</html>
+
+<script>
+    //a) Pergunte ao usuário quantas pessoas vão entrar no carro;
+    //b) Ao clicar num botão "#Partiu Carona":
+    //c) Exiba, debaixo do botão, frases como estas:
+    //Entrou o 1º passageiro (que é o(a) motorista)
+    //Entrou o 2º passageiro
+    //Entrou o 3º passageiro
+    //Entrou o 4º passageiro
+    //Entrou o 5º passageiro
+    //O 6º passageiro terá que esperar!
+    //O 7º passageiro terá que esperar!
+    //d) Note que, sempre na frase do 1º passageiro, deve constar ao lado que é o motorista;
+    //e) A partir do 6º passageiro, a frase muda, pois o carro só comporta 5 passageiros.
+    //a) Também tenha um campo no qual o usuário indique a capacidade de passageiros que o veículo suporta;
+    //b) Ao clicar no botão, as frases só começam a mostrar que o passageiro terá que esperar quando a capacidade indicada em a) for excedida.
+
+
+    function carona() {
+        var qtd_pessoas = Number(input_qtd_pessoas.value)
+        var contagem = 1
+        var capacidade = Number(input_capacidade.value)
+        while (contagem < qtd_pessoas) {
+            contagem += 1
+            if (contagem > capacidade) {
+                div_passageiros.innerHTML += `<br> ${contagem}º passageiro terá que esperar!`
+            } else {
+                div_passageiros.innerHTML += ` <br>${contagem}º passageiro`
+
+            }
+        }
+    }
+</script>

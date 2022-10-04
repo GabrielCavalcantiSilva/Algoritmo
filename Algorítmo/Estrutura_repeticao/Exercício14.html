@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a sua idade: <input id="input_idade" onkeyup="contar_vida ()">
+    <div id="div_historia_da_vida"></div>
+</body>
+</html>
+<script>
+//vá contando a idade do usuário e descrevendo sua fase na vida, considerando que:
+//- Primeira Infância: 0 a 4 anos
+//- Pré-escolar: + de 4 aos 6 anos
+//- Segunda Infância: + de 6 aos 10 anos
+//- Adolescência: + de 10 aos 18 anos
+//- Adulto: + de 18 até os 50 anos
+//- Melhor idade: + de 50 anos até 100 anos
+//- Ancião: + de 100 anos
+//Assim, sua página HTML deve solicitar a idade do usuário. Na medida que for digitando, deve aparecer uma contagem de idade e indicação de fase da vida abaixo como neste exemplo:
+//0 anos (Primeira Infância)
+//1 anos (Primeira Infância)
+//2 anos (Primeira Infância)
+//3 anos (Primeira Infância)
+//4 anos (Primeira Infância)
+//5 anos (Pré-escolar)
+//6 anos (Pré-escolar)
+//7 anos (Segunda Infância)
+//....
+//  A última linha deve ser a idade informada.
+function contar_vida () {
+    var idade = Number (input_idade.value)
+    var contagem = 0
+    div_historia_da_vida.innerHTML = "" 
+    while (contagem < idade) {
+        contagem += 1
+        if (contagem <=4){
+            div_historia_da_vida.innerHTML += `<br> ${contagem} anos (Primeira Infância)`
+        } else if (contagem <= 6) {
+            div_historia_da_vida.innerHTML += `<br> ${contagem} anos (Pré-escolar)`
+        } else if (contagem <= 10) {
+            div_historia_da_vida.innerHTML += `<br> ${contagem} anos (Segunda Infância)`
+        } else if (contagem <= 18) {
+            div_historia_da_vida.innerHTML += `<br> ${contagem} anos (Adolescência)`
+        }else if (contagem <= 50) {
+            div_historia_da_vida.innerHTML += `<br> ${contagem} anos (Adulto)`
+        }else if (contagem <= 100) {
+            div_historia_da_vida.innerHTML += `<br> ${contagem} anos (Melhor idade)`
+        } else {div_historia_da_vida.innerHTML += `<br> ${contagem} anos (Ancião)`}
+    } 
+}
+</script>

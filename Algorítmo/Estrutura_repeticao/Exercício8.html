@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    insira um valor: <input id="input_valor"> <br>
+    <button onclick="multiplos7()">Viva o 7!</button>
+    <div id="div_multiplos"></div>
+</body>
+
+</html>
+
+<script>
+    //a) Receba um número (tem que estar entre 0 e 200);
+    //a.1) Se o número estiver fora do intervalo estipulado, exiba um alert com uma mensagem de erro e não faça mais nada.
+    //b) Tenha um botão chamado "Viva o 7!";
+    //c) Ao clicar no botão, devem aparecer todos os múltiplos de 7 entre 0 e o número informado em a);
+    //ATENÇÃO! Use a técnica de dedução de múltiplos por uso do resto da divisão e não a técnica de incrementar em 7. 
+    //Para saber se um número é múltiplo de 7, basta descobrir se o resto da divisão dele por 7 é 0.
+    function multiplos7() {
+        var valor_recebido = Number(input_valor.value)
+        var contagem = 1
+        if (valor_recebido < 0 || valor_recebido > 200) {
+            alert("valor inválido!")
+        } else {
+            while (contagem <= valor_recebido) {
+                contagem += 1
+                if (contagem % 7 == 0) {
+                    div_multiplos.innerHTML += `${contagem} <br>`
+                }
+            }
+        }
+    }
+</script>

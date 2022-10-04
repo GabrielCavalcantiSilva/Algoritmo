@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Quantos ônibus pega: <input type="text" id="input_qtd_onibus"> <br>
+    quantos trens pega: <input type="text" id="input_qtd_trem"> <br>
+    Quantos metrôs pega: <input type="text" id="input_qtd_metro"> <br>
+    <button onclick="vambora ()">#Partiu Trajeto</button> <br>
+    <span id="trajeto_onibus" style="color: red;"></span> <br>
+    <span id="trajeto_trem" style="color: green;"></span><br>
+    <span id="trajeto_metro" style="color: blue;"></span>
+</body>
+
+</html>
+<script>
+    function vambora() {
+        var qtd_onibus = Number(input_qtd_onibus.value)
+        var qtd_trem = Number(input_qtd_trem.value)
+        var qtd_metro = Number(input_qtd_metro.value)
+        var contagem_onibus = 0
+        var contagem_trem = 0
+        var contagem_metro = 0
+        while (contagem_onibus < qtd_onibus) {
+            contagem_onibus += 1
+            
+            if (contagem_onibus == 2) {
+                trajeto_onibus.innerHTML += `${contagem_onibus}º busão. Começando a cansar <br>`
+            } else if (contagem_onibus >=3){
+                trajeto_onibus.innerHTML += `${contagem_onibus}º busão. Já cansado! <br>`
+            }else {
+                trajeto_onibus.innerHTML += `${contagem_onibus}º busão. <br>`
+            }
+        }
+        while (contagem_trem < qtd_trem) {
+            contagem_trem += 1
+            if (contagem_trem == 2) {
+                trajeto_trem.innerHTML += `${contagem_trem}º trem. Começando a cansar <br>`
+            } else if (contagem_trem >=3){
+                trajeto_trem.innerHTML += `${contagem_trem}º trem. Já cansado! <br>`
+            }else {
+                trajeto_trem.innerHTML += `${contagem_trem}º trem. <br>`
+            }
+        }
+        while (contagem_metro < qtd_metro) {
+            contagem_metro += 1
+            
+            if (contagem_metro == 2) {
+                trajeto_metro.innerHTML += `${contagem_metro}º metro. Começando a cansar <br>`
+            } else if (contagem_metro >=3){
+                trajeto_metro.innerHTML += `${contagem_metro}º metro. Já cansado! <br>`
+            }else {
+                trajeto_metro.innerHTML += `${contagem_metro}º metro. <br>`
+            }
+        }
+    }
+</script>

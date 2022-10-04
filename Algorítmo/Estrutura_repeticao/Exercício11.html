@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira quantas voltas o carro dará  na corrida: <input id="input_qtd_voltas"> <br>
+    <button onclick="corridinha ()">Iniciar corrida!</button>
+    <div id="div_corrida"></div>
+</body>
+</html>
+
+<script>
+function corridinha () {
+    var qtd_voltas = Number (input_qtd_voltas.value)
+    var contagem = 1
+    while (contagem <= qtd_voltas) {
+        div_corrida.innerHTML += `Carro dando ${contagem}ª volta <br>`
+        contagem += 1
+        if (contagem > qtd_voltas) {
+            div_corrida.innerHTML += `Corrida finalizada! <br>`
+        }
+    }
+}
+</script>

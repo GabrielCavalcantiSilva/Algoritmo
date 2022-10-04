@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira os troféus do time: <input id="input_time_trofeus"> <button onclick="coisinha ()">Ver troféus mundiais
+        FIFA</button>
+    <div id="div_imagem"></div>
+</body>
+
+</html>
+
+<script>
+    function coisinha() {
+        var qtd_trofeus = Number(input_time_trofeus.value)
+        var contagem = 1
+        if (qtd_trofeus == 0) {
+            div_imagem.innerHTML = `<img src="https://carsughi.uol.com.br/wp-content/uploads/2012/11/torcedor-palmeiras-chora.jpg">`
+        } else {
+            while (contagem <= qtd_trofeus) {
+                div_imagem.innerHTML += `<img src = "https://st.depositphotos.com/1245125/3516/v/600/depositphotos_35164053-stock-illustration-vector-illustration-of-gold-shiny.jpg">`
+                contagem += 1
+            }
+        }
+    }
+</script>
