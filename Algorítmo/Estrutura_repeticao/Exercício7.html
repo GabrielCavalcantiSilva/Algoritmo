@@ -20,14 +20,16 @@
         var valor_recebido = Number(input_numero.value)
         var contagem = 0
 
+    } if (valor_recebido < 20 || valor_recebido > 100) {
+        alert("Deve ser um número entre 20 e 100! Insira novamente.")
+        div_resultado.innerHTML = ""
+    } else {
         while (contagem < valor_recebido) {
             contagem += 1
             if (contagem % 5 == 0) {
                 div_resultado.innerHTML += `${contagem} <br>`
             }
-        } if (valor_recebido < 20 || valor_recebido > 100) {
-            alert("Deve ser um número entre 20 e 100! Insira novamente.")
-            div_resultado.innerHTML = ""
+
         }
     }
 </script>
