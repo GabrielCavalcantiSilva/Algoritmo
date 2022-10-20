@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NARUTOOOO</title>
+</head>
+
+<body>
+    Pontos de energia: <input type="number" id="input_qtd_energia"> <br>
+    Quantaidade de clones desejada: <input type="number" id="input_qtd_clones"> <br>
+    Quantidade de clones por linha: <input type="number" id="input_qtd_linha"> <br>
+    <button onclick="previsao_batalha ()">Criar clones</button>
+    <div id="div_clones_naruto">
+        <span id="span_clones" style="flex-direction: row;" ; "></span>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function previsao_batalha() {
+        var qtd_energia = Number(input_qtd_energia.value)
+        var qtd_clones = Number(input_qtd_clones.value)
+        var qtd_linhas = Number(input_qtd_linha.value)
+        var contador = 0
+
+        //Verificar se inputs estão válidos
+        if (qtd_energia < 20 || qtd_energia > 5000 || qtd_clones < 0 || qtd_clones > 250 || qtd_linhas < 0) {
+            alert("ERRO NA ENTRADA DE DADOS – Energia tem que ser entre 20 e 5.000. Quantidade de Clones tem que ser entre 0 e 250. Quantidade de Clones por linha tem que ser maior que 0")
+        } 
+        //Verificar se tem energia o suficiente
+        else if (qtd_energia < qtd_clones * 20) {
+            alert("O Naruto não tem chakra o suficiente para fazer mais clones! Recupere o chakra!")
+        } else {
+            //Mostrar imagens
+            while (contador < qtd_clones) {
+                span_clones.innerHTML += `<img src="https://occ.a.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQ94zuZk-nr5fUE0hX0b1QTxRqftRmYdV97decHANZkQNK8MmOuVGLpgxGJvy_RMfl4UBvigYJnUluud1n5dE--qdMrMlmwF43fG8WkYSSIHkU8ORSuYInVb.jpg?r=480"><br>`
+                contador += 1    
+            }
+            //Relatório de batalha
+            if (contador <= qtd_clones) {
+                div_clones_naruto.innerHTML += `<br>
+                ANÁLISE DA GERAÇÃO DE CLONES <br>
+                Energia inicial: ${qtd_energia} <br>
+                Qtde de Clones: ${qtd_clones} <br>
+                Sobra de energia: ${qtd_energia - (qtd_clones * 20)}`
+            }
+            if (qtd_linhas > 2) {
+                span_clones.innerHTML += `<br> <img src="https://occ.a.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQ94zuZk-nr5fUE0hX0b1QTxRqftRmYdV97decHANZkQNK8MmOuVGLpgxGJvy_RMfl4UBvigYJnUluud1n5dE--qdMrMlmwF43fG8WkYSSIHkU8ORSuYInVb.jpg?r=480"><br>`
+
+            }
+            //Comentários sobre batalha
+            if ((qtd_energia - (qtd_clones * 20)) <= (qtd_energia * 0.10)) {
+                div_clones_naruto.innerHTML += `<br> A Torça para o adversário ser fraquinho <br>`
+            } else if ((qtd_energia - (qtd_clones * 20)) <= (qtd_energia * 0.20)) {
+                div_clones_naruto.innerHTML += `<br> A luta vai ser muito boa <br>`
+            } else {
+                div_clones_naruto.innerHTML += `<br> Provavelmente vai ganhar <br>`
+            }
+        }
+
+    }
+
+</script>
+
+midade: 48.00;     Temperatura: 23.40; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 13.12; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 10.50; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 11.81; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 14.43; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 15.74; 
+ 
+Umidade: 48.00;     Temperatura: 23.40; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 13.12; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 10.50; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 11.81; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 14.43; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 15.74; 
+ 
+Umidade: 48.00;     Temperatura: 23.40; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 13.12; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 10.50; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 11.81; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 14.43; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 15.74; 
+ 
+Umidade: 48.00;     Temperatura: 23.40; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 13.12; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 10.50; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 11.81; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 14.43; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 15.74; 
+ 
+Umidade: 48.00;     Temperatura: 23.40; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 13.12; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 10.50; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 11.81; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 14.43; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 15.74; 
+ 
+Umidade: 48.00;     Temperatura: 23.40; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 13.12; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 10.50; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 11.81; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 14.43; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 15.74; 
+ 
+Umidade: 48.00;     Temperatura: 23.40; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 13.12; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 10.50; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 11.81; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 14.43; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 15.74; 
+ 
+Umidade: 48.00;     Temperatura: 23.40; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 13.12; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 10.50; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 11.81; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 14.43; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 15.74; 
+ 
+Umidade: 48.00;     Temperatura: 23.40; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 13.12; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 10.50; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 11.81; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 14.43; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 15.74; 
+ 
+Umidade: 48.00;     Temperatura: 23.40; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 13.12; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 10.50; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 11.81; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 14.43; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 15.74; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 
+ 
+Umidade projeto: 17.60;     Temperatura projeto: 15.84; 
+ 
+Umidade projeto (1): 14.08;     Temperatura projeto (1): 12.67; 
+ 
+Umidade projeto (2): 15.84;     Temperatura projeto (2): 14.26; 
+ 
+Umidade projeto (3): 19.36;     Temperatura projeto (3): 17.42; 
+ 
+Umidade projeto (4): 21.12;     Temperatura projeto (4): 19.01; 
+ 
+Umidade: 48.00;     Temperatura: 23.80; 

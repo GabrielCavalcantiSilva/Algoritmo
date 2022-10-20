@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  Nome: <input id="input_nome" /><br />
+  Distância (km): <input id="input_distancia" /><br />
+  Passageiros: <input id="input_qtd_passageiros" />
+  <button onclick="calcular_custo_viagem()">Calcular custo da viagem</button>
+  <div id="div_resultado"></div>
+</body>
+
+</html>
+
+
+
+<script>
+  var total_corrida = 0
+  var total_liquido_motorista = 0
+  function calcular_custo_viagem() {
+    var nome = input_nome.value
+    var distancia = Number(input_distancia.value)
+    var passageiros = Number(input_qtd_passageiros.value)
+    var valor_final = 7 + (1.5 * distancia)
+    var valor_final_passageiros = (((0.5 * valor_final) * passageiros) + valor_final)
+    var desconto = valor_final_passageiros * 0.02
+    var liquido = valor_final_passageiros - desconto
+
+    div_resultado.innerHTML = `
+
+============================ <br>
+Passageiro(a): ${nome} <br>
+Valor final da corrida: R$${valor_final_passageiros} <br>
+Valor descontado do motorista: R$${desconto} <br>
+Líquido do motorista: R$${liquido} <br>
+Total corridas: ${total_corrida += 1} <br>
+Total líquido motorista: R$${total_liquido_motorista += liquido} <br>
+============================
+
+`
+  } 
+</script>
