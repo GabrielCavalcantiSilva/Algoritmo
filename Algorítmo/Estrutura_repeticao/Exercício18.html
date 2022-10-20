@@ -41,20 +41,20 @@
         var qtd_onibus = Number(input_qtd_onibus.value)
         var qtd_trem = Number(input_qtd_trem.value)
         var qtd_metro = Number(input_qtd_metro.value)
-        var contagem_trem = 0
-        var contagem_onibus = 0
-        var contagem_metro = 0
-        while (contagem_onibus < qtd_onibus) {
-            contagem_onibus += 1
-            trajeto_onibus.innerHTML += `${contagem_onibus}º busão <br>`
+        var contagem = 0
+        while (contagem < qtd_onibus) {
+            contagem += 1
+            trajeto_onibus.innerHTML += `${contagem}º busão <br>`
         }
-        while (contagem_trem < qtd_trem) {
-            contagem_trem += 1
-            trajeto_trem.innerHTML += `${contagem_trem}º trem <br>`
+        contagem = 0
+        while (contagem < qtd_trem) {
+            contagem += 1
+            trajeto_trem.innerHTML += `${contagem}º trem <br>`
         }
-        while (contagem_metro < qtd_metro) {
-            contagem_metro += 1
-            trajeto_metro.innerHTML += `${contagem_metro}º metrô <br>`
+        contagem = 0
+        while (contagem < qtd_metro) {
+            contagem += 1
+            trajeto_metro.innerHTML += `${contagem}º metrô <br>`
         }
     }
 </script>
