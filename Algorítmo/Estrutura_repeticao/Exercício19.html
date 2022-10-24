@@ -32,12 +32,12 @@
         var contagem_metro = 0
         while (contagem_onibus < qtd_onibus) {
             contagem_onibus += 1
-            
+
             if (contagem_onibus == 2) {
                 trajeto_onibus.innerHTML += `${contagem_onibus}º busão. Começando a cansar <br>`
-            } else if (contagem_onibus >=3){
+            } else if (contagem_onibus >= 3) {
                 trajeto_onibus.innerHTML += `${contagem_onibus}º busão. Já cansado! <br>`
-            }else {
+            } else {
                 trajeto_onibus.innerHTML += `${contagem_onibus}º busão. <br>`
             }
         }
@@ -45,20 +45,20 @@
             contagem_trem += 1
             if (contagem_trem == 2) {
                 trajeto_trem.innerHTML += `${contagem_trem}º trem. Começando a cansar <br>`
-            } else if (contagem_trem >=3){
+            } else if (contagem_trem >= 3) {
                 trajeto_trem.innerHTML += `${contagem_trem}º trem. Já cansado! <br>`
-            }else {
+            } else {
                 trajeto_trem.innerHTML += `${contagem_trem}º trem. <br>`
             }
         }
         while (contagem_metro < qtd_metro) {
             contagem_metro += 1
-            
+
             if (contagem_metro == 2) {
                 trajeto_metro.innerHTML += `${contagem_metro}º metro. Começando a cansar <br>`
-            } else if (contagem_metro >=3){
+            } else if (contagem_metro >= 3) {
                 trajeto_metro.innerHTML += `${contagem_metro}º metro. Já cansado! <br>`
-            }else {
+            } else {
                 trajeto_metro.innerHTML += `${contagem_metro}º metro. <br>`
             }
         }

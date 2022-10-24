@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json2</title>
+</head>
+
+<body>
+    <input placeholder="Insira o nome" id="ipt_nome"> <br>
+    <input placeholder="Insira o sobrenome" id="ipt_sobrenome">
+    <button onclick="Exibir()">Exibir informações</button><br>
+    <input placeholder="Insira a idade" id="ipt_idade">
+    <div id="div_teste"></div>
+</body>
+
+</html>
+
+<script>
+    function Exibir() {
+        var nome = ipt_nome.value
+        var sobrenome = ipt_sobrenome.value
+        var idade = Number(ipt_idade.value)
+
+        var ano = 2022
+
+        var pessoa = {
+            nome: nome,
+            sobrenome: sobrenome,
+            idade: idade,
+        }
+
+
+        div_teste.innerHTML = `Nome: ${pessoa.nome} ${pessoa.sobrenome} <br> Ano de nascimento: ${ano - idade}`
+
+    }
+</script>

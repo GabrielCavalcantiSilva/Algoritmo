@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json 3</title>
+</head>
+
+<body>
+    <input placeholder="Insira o nome" id="ipt_nome"> <br>
+    <input placeholder="Insira o sobrenome" id="ipt_sobrenome"> <br>
+    <input placeholder="Insira a idade" id="ipt_idade">
+    <button onclick="Exibir()">Exibir informações</button><br>
+    <div id="div_teste"></div>
+</body>
+
+</html>
+
+<script>
+    function Exibir() {
+        var pessoa = {
+            nome,
+            sobrenome,
+            idade,
+        }
+        var nome = ipt_nome.value
+        var sobrenome = ipt_sobrenome.value
+        var idade = Number(ipt_idade.value)
+    
+        pessoa.nome = nome
+        pessoa.sobrenome = sobrenome
+        pessoa.idade = idade
+        div_teste.innerHTML = `Nome: ${pessoa.nome} ${pessoa.sobrenome}`
+    
+    }
+</script>
