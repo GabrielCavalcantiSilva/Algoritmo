@@ -25,7 +25,7 @@
     function exibir() {
         var responsavel = {
             nome: ipt_nome_resp.value,
-            sobrenome: ipt_nome_resp.value
+            sobrenome: ipt_sobrenome_resp.value
         }
         var aluno = {
             nome: ipt_nome_aln.value,
@@ -37,6 +37,6 @@
             tipo: 'RG',
             numero: 123456789
         }
-        div_teste.innerHTML = `Responsável: ${responsavel.nome} ${responsavel.sobrenome} <br> Aluno: ${aluno.nome} ${aluno.sobrenome}`
+        div_teste.innerHTML = `Responsável: ${responsavel.nome} ${responsavel.sobrenome} <br> Identidade: ${responsavel.identidade.numero} <br> Aluno: ${aluno.nome} ${aluno.sobrenome}`
     }
 </script>
