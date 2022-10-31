@@ -12,7 +12,7 @@
     <h3>Responsável</h3>
     <input placeholder="Insira o nome" id="ipt_nome_resp">
     <input placeholder="Insira o sobrenome" id="ipt_sobrenome_resp">
-    <h3>Aluno </h3>
+    <h3>Aluno</h3>
     <input placeholder="Insira o nome" id="ipt_nome_aln">
     <input placeholder="Insira o sobrenome" id="ipt_sobrenome_aln"> <br>
     <button onclick="exibir()">Exibir informações</button>
@@ -22,21 +22,21 @@
 </html>
 
 <script>
-function exibir() {
-    var responsavel = {
-        nome: ipt_nome_resp.value,
-        sobrenome: ipt_nome_resp.value
-    }
-    var aluno = {
-        nome: ipt_nome_aln.value,
-        sobrenome: ipt_sobrenome_aln.value,
-    }
+    function exibir() {
+        var responsavel = {
+            nome: ipt_nome_resp.value,
+            sobrenome: ipt_nome_resp.value
+        }
+        var aluno = {
+            nome: ipt_nome_aln.value,
+            sobrenome: ipt_sobrenome_aln.value,
+        }
 
 
-    responsavel.identidade = {
-        tipo: 'RG',
-        numero: 123456789
+        responsavel.identidade = {
+            tipo: 'RG',
+            numero: 123456789
+        }
+        div_teste.innerHTML = `Responsável: ${responsavel.nome} ${responsavel.sobrenome} <br> Aluno: ${aluno.nome} ${aluno.sobrenome}`
     }
-    div_teste.innerHTML = `Responsável: ${responsavel.nome} ${responsavel.sobrenome} <br> Aluno: ${aluno.nome} ${aluno.sobrenome}`
-}
 </script>
