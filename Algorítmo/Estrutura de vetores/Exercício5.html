@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício5</title>
+</head>
+
+<body>
+    Cadastre os alunos: <input placeholder="alunos" id="ipt_alunos"> <br>
+    <button onclick="cadastro_aluno()">Cadastrar alunos</button>
+    <div id="div_alunos"></div>
+</body>
+
+</html>
+
+<script>
+    var lista_aluno = []
+    function cadastro_aluno() {
+        lista_aluno.push(ipt_alunos.value)
+        mostrar_aluno()
+    }
+    function mostrar_aluno() {
+        div_alunos.innerHTML = ""
+        for (var contador = lista_aluno.length; contador > 0; contador--) {
+            div_alunos.innerHTML += `${lista_aluno[contador - 1]} <br> `
+        }
+    }
+</script>
