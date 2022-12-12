@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtinhos ayayaya</title>
+</head>
+
+<body>
+    Insira o produto <br>
+    Código: <input id="ipt_codigo"> <br>
+    Nome: <input id="ipt_nome"> <br>
+    Quantidade em estoque <input id="ipt_qtd_estq"> <br>
+    <button onclick="salvar()">Salvar produto</button><button onclick="ver_estoque()">Ver estoque</button>
+    <div id="div_resultado"></div>
+</body>
+
+</html>
+
+<script>
+    var lista_produtos = []
+    function salvar() {
+        const codigo = ipt_codigo.value
+        const nome = ipt_nome.value
+        const qtd_estq = Number(ipt_qtd_estq.value)
+
+        if (codigo == "") {
+            alert("Código inválido para o produto")
+        } else if (nome == "") {
+            alert("Nome inválido para o produto")
+        } else if (qtd_estq == "") {
+            alert("Quantidade inválida para o produto")
+        } else {
+
+            var check = false
+            var Posicao_achada = -1
+            var produto = {
+                Código: codigo,
+                Nome: nome,
+                Estoque: ipt_qtd_estq
+            }
+
+            for (var contagem = 0; contagem < lista_produtos.length; contagem++) {
+                if (codigo == lista_produtos[contagem].Código) {
+                    check = true
+                    Posicao_achada = contagem
+                }
+            }
+
+            if (check == true) {
+                lista_produtos[Posicao_achada].Estoque += qtd_estq
+                div_resultado.innerHTML = `O produto de código ${codigo} teve sua quantidade aumentada`
+            } else {
+                lista_produtos.push(produto)
+                div_resultado.innerHTML = `Produto cadastrado com sucesso`
+            }
+
+        }
+    }
+
+    function ver_estoque() {
+        for(var posicao = 0; posicao < lista_produtos.length; posicao++){
+            div_resultado.innerHTML+= `<br>Código: ${lista_produtos[posicao].Código} <br>
+                                        Nome: ${lista_produtos[posicao].Nome} <br>
+                                        Quantidade: ${lista_produtos[posicao].Estoque}`
+        }
+    }
+</script>
